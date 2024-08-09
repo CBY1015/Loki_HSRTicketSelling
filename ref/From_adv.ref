@@ -40,13 +40,13 @@
             "id": "ddbecc4e-1afa-46bd-af03-e6d9181d61c3",
             "pos": "<ENTITY_oov>起點</ENTITY_oov><AUX>是</AUX><LOCATION>臺北</LOCATION>",
             "lexy": [],
-            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起點|出發地</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>"
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(起點|出發地)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))><AUX>[^<]+</AUX><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>"
         },
         "出發地在臺北": {
             "id": "6d74bb92-dd1f-4593-95e2-b1bdf3544f3c",
             "pos": "<ENTITY_nouny>出發地</ENTITY_nouny><FUNC_inner>在</FUNC_inner><LOCATION>臺北</LOCATION>",
             "lexy": [],
-            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>起點|出發地</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>"
+            "pattern": "<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(起點|出發地)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>"
         },
         "出發站是台北": {
             "id": "6400dccc-7566-4a2f-a966-432f31096980",
@@ -55,7 +55,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|起航|啟程|啟航|出航|發車|起程|起飛|抵達|飛回|飛抵)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(站|站間|站側|站亦|站共|站到|站出|原站|站約|站口|總站)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>出發|發車</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>站</(ACTION_verb|VerbP)><AUX>[^<]+</AUX><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|發車)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>站</(ACTION_verb|VerbP)><AUX>[^<]+</AUX><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>"
         },
         "我從臺北出發": {
             "id": "7c718643-7f3c-4f27-8a92-4a63651b430f",
@@ -63,7 +63,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|起航|啟程|啟航|出航|發車|起程|起飛|抵達|飛回|飛抵)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>出發|啟程|發車|起程</(ACTION_verb|VerbP)>"
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(出發|啟程|發車|起程)</(ACTION_verb|VerbP)>"
         },
         "板橋到嘉義來回": {
             "id": "4a89187d-3623-47d0-9ee5-831eaba76e39",
@@ -72,7 +72,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(來回|往返|直飛|往|經停|來往|加酒|直航|直達|繞經)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>到|往</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>來回|往返</(ACTION_verb|VerbP)>"
+            "pattern": "<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(到|往)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(來回|往返)</(ACTION_verb|VerbP)>"
         },
         "從南港出發的一張": {
             "id": "f51aa6c1-c1a6-45cd-8b9b-6541cde91768",
@@ -80,7 +80,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|起航|啟程|啟航|出航|發車|起程|起飛|抵達|飛回|飛抵)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>出發|啟程|發車|起程</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>"
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(出發|啟程|發車|起程)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>"
         },
         "一張從南港出發的票": {
             "id": "dc8cc96e-0eec-47ca-b842-7d707eeea80c",
@@ -88,7 +88,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|起航|啟程|啟航|出航|發車|起程|起飛|抵達|飛回|飛抵)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>出發|啟程|發車|起程</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(出發|啟程|發車|起程)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "從板橋到嘉義再回來": {
             "id": "3faf81a0-4a50-48bf-a347-93f153052a3e",
@@ -97,7 +97,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(回來|回去|回報|回擊|回敬|回返|回饋|返回|退回|上來|下來)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>抵達|到達|到|到了</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(MODIFIER|ModifierP)>後|然後|接著|再</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>回來|回去|折返|回程|返回</(ACTION_verb|VerbP)>"
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(抵達|到達|到|到了)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(MODIFIER|ModifierP)>(後|然後|接著|再)</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>(回來|回去|折返|回程|返回)</(ACTION_verb|VerbP)>"
         },
         "由板橋抵達嘉義後回程": {
             "id": "41f2c41b-7bb4-435e-b698-09830bd61124",
@@ -105,7 +105,7 @@
             "lexy": [
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(抵達|到達|達到|達成|達標|來到|到來|返抵|趕到|到達了|前往)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>抵達|到達|到|到了</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>回來|回去|折返|回程|返回</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(抵達|到達|到|到了)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(回來|回去|折返|回程|返回)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "從板橋前往嘉義後再返回": {
             "id": "cc396d42-227d-4b26-a576-2ec00f5ec220",
@@ -114,7 +114,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(前往|前進|挺進|推進|行進|進逼|趕回|赴|親赴|返回|來到)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(返回|回來|回去|回報|回擊|回敬|回返|回饋|復返|折回|折返)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>前往|往|到</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(MODIFIER|ModifierP)>後|然後|接著|再</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>回來|回去|折返|回程|返回</(ACTION_verb|VerbP)>"
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(前往|往|到)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><RANGE_(locality|period)>[^<]+</RANGE_(locality|period)><(MODIFIER|ModifierP)>(後|然後|接著|再)</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>(回來|回去|折返|回程|返回)</(ACTION_verb|VerbP)>"
         },
         "我要一張從左營北上的票": {
             "id": "b4cf2571-d04a-42f9-8ffb-3ab9ba616705",
@@ -123,7 +123,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|餓了|得照|需|更要)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(北上|南下|前往|進兵|入川|回援|東進|開赴|調兵|北進|西進)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>要|想要|需要|想買|要買</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>北上|南下</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票|高鐵票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(要|想要|需要|想買|要買)</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(北上|南下)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "我要一張從雲林到苗栗的票": {
             "id": "0c9ede80-e564-4b98-be36-f6d38851ea82",
@@ -132,7 +132,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(要|想要|需要|想拿|想買|渴望|渴求|真要|得照|更要|要去)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>要|想要|需要|想買|要買</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>前往|往|到</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票|高鐵票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(要|想要|需要|想買|要買)</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(前往|往|到)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "請給我一張從南港出發的票": {
             "id": "3cd08a4f-0f8d-4233-8905-729b70c00142",
@@ -142,7 +142,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(出發|起航|啟程|啟航|出航|發車|起程|起飛|抵達|飛回|飛抵)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>請</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>出發|啟程|發車|起程</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票|高鐵票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>請</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(出發|啟程|發車|起程)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "從板橋出發到嘉義然後再回來": {
             "id": "50d2d049-da85-4e8e-a234-fd516be9443c",
@@ -152,7 +152,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(回來|回去|回報|回擊|回敬|回返|回饋|返回|退回|上來|下來)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>出發|啟程|發車|起程</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>抵達|到達|到|到了</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(MODIFIER|ModifierP)>後|然後|接著|再</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>回來|回去|折返|回程|返回</(ACTION_verb|VerbP)>"
+            "pattern": "(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(出發|啟程|發車|起程)</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>(抵達|到達|到|到了)</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(MODIFIER|ModifierP)>(後|然後|接著|再)</(MODIFIER|ModifierP)><(ACTION_verb|VerbP)>(回來|回去|折返|回程|返回)</(ACTION_verb|VerbP)>"
         },
         "我想買一張從雲林開往苗栗的票": {
             "id": "21883310-e733-4246-aaac-9aade513dcdc",
@@ -161,7 +161,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(想買|想拿|想要|需要|買不到|愛吃|買|賣過|買過|想吃|偷了)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(開|開了|有開|發開|正開|站開|原開|到開|集搬|開過|改開)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>想買|想要|要|要買</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>開|前</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票|高鐵票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<(ACTION_verb|VerbP)>(想買|想要|要|要買)</(ACTION_verb|VerbP)><ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>(開|前)</(ACTION_verb|VerbP)>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         },
         "請給我一張從雲林到苗栗的車票": {
             "id": "4c61a72b-ea64-4207-9b9d-02787b44fba3",
@@ -171,7 +171,7 @@
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(給|供給|帶給|提供|發放|資助|給老|交給|留給|給聖|分給)</(ACTION_verb|VerbP)>",
                 "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>(到|到了|到約|到受|到離|到包|到經過|到回|到隨|到死|到愛)</(ACTION_verb|VerbP)>"
             ],
-            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>請</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION><(ACTION_verb|VerbP)>到|往</(ACTION_verb|VerbP)><LOCATION>南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>票|車票|高鐵票</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
+            "pattern": "(?<!</FUNC_negation>)<(ACTION_verb|VerbP)>請</(ACTION_verb|VerbP)><(ACTION_verb|VerbP)>給</(ACTION_verb|VerbP)>(<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)?<ENTITY_classifier>[^<]+</ENTITY_classifier>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION><(ACTION_verb|VerbP)>到|往</(ACTION_verb|VerbP)><LOCATION>(南港|臺北|台北|板橋|桃園|新竹|苗栗|臺中|台中|彰化|雲林|嘉義|臺南|台南|左營)</LOCATION>(<FUNC_in(ner|ter)>[^<]+</FUNC_in(ner|ter)>)?<(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>(票|車票|高鐵票)</(UserDefined|ENTITY_(nounHead|nouny|noun|oov))>"
         }
     },
     "alias": {},
